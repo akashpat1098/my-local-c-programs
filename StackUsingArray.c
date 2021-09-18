@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define N 50
-int stack[N];
+int stack[N]; //here,stack is created by array
 int top=-1;
     
 void push(int x){

@@ -9,6 +9,7 @@ struct node
 };
 struct node *top=NULL;
 int count=0;
+
 void push(int x){
     struct node *newNode;
     newNode=(struct node*)malloc(sizeof(struct node));
