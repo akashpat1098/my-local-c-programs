@@ -1,5 +1,5 @@
 //code works properly but with graet effort of expirement
-//this code has to main 
+//this code has two main 
 //in one all deatil are there and on another output detail are there like showing address 
 //so  uncomment any one main only and use
 

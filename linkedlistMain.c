@@ -11,6 +11,7 @@ struct node
 int count=0;
 struct node* head=NULL;
 struct node*temp;
+//this insert node at last 
 void insertNode(int data){
         struct node*temp;
         struct node* newNode=(struct node*)malloc(sizeof(struct node));
@@ -31,7 +32,7 @@ void insertNode(int data){
     
     
 }
-
+//this delete node at last 
 void deleteNode(){
     if (head==NULL)
     {
@@ -60,12 +61,12 @@ void deleteNode(){
         count--;
     }  
 }
-
+//this can insert at any index including first and last
 void insertNodeAtIndex(int data,int index){
     
     if (index>count || index<0)
     {
-        printf("Index is outof bound. %d cannot be added into the linkedlist\n",data);
+        printf("Index %d is outof bound. %d cannot be added into the linkedlist\n",index,data);
     }
     else
     {
@@ -199,6 +200,22 @@ int main()
     deleteNode();
     display();
     deleteNode();
+    display();
+    insertNodeAtIndex(0,0);
+    display();
+    insertNodeAtIndex(0,8);
+    display();
+    insertNodeAtIndex(0,3);
+    display();
+    deleteNodeAtIndex(4);
+    display();
+    deleteNodeAtIndex(0);
+    display();
+    deleteNodeAtIndex(5);
+    display();
+    deleteNodeUsingValue(99);
+    display();
+    deleteNodeUsingValue(1);
     display();
     return 0;
 }
