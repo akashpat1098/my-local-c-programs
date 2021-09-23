@@ -19,23 +19,17 @@ int* func1(int*ptr){
 
 
 int main()
- {  
-    char s[10];
-    printf("Eneter the string\n");
-     scanf("%[^\n]%*c", s);
-     printf("%s",s);
+ {
+     char a[10];
+     printf("ENter:");
+    fgets(a,10,stdin);
+    fputs(a,stdout);
 
 
-
-
-
-
-
-
-
-
-
-
+    // char s[10];
+    // printf("Eneter the string\n");
+    //  scanf("%[^\n]%*c", s);
+    //  printf("%s",s);
 
     // int* ptr=NULL,*test;
     // ptr=func1(ptr);
