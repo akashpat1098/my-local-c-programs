@@ -27,16 +27,31 @@ void show(struct myArray* a){
     {
         printf("%d ",(a->ptr)[i]);   
     }
-    
+    printf("\n");
 }
+void reverse(struct myArray* a){
+    int temp;
+    printf("Element after reversed");
+    for (int i = 0; i < a->usedSize/2; i++)
+    {
+    temp=(a->ptr)[i];
+    (a->ptr)[i]=(a->ptr)[a->usedSize-i-1];
+    (a->ptr)[a->usedSize-i-1]=temp;
+    // *(arr+i)=*(arr+(num-i-1));
+    }
+    printf("\n");
+}
+    
 
 int main()
 {
     struct myArray rollNo;
     // rollNo.totalSize=14;
     // printf("%d",rollNo.totalSize);
-    createArray(&rollNo,10,2);
+    createArray(&rollNo,10,5);
     insert(&rollNo);
+    show(&rollNo);
+    reverse(&rollNo);
     show(&rollNo);
     
     

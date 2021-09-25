@@ -20,10 +20,31 @@ int* func1(int*ptr){
 
 int main()
  {
-     char a[10];
-     printf("ENter:");
-    fgets(a,10,stdin);
-    fputs(a,stdout);
+    // int num, *arr, i;
+    // scanf("%d", &num);
+    // arr = (int*) malloc(num * sizeof(int));
+    // for(i = 0; i < num; i++) {
+    // scanf("%d", arr + i);
+    // }
+    // int temp;
+    // for (int i=0; i<num/2; i++) {
+    //     temp=arr[i];
+    // arr[i]=arr[num-i-1];
+    // arr[num-i-1]=temp;
+    // // *(arr+i)=*(arr+(num-i-1));
+    // }
+    // /* Write the logic to reverse the array. */
+
+    // for(i = 0; i < num; i++)
+    //     printf("%d ", *(arr + i));
+//*************************************************
+
+
+
+    //  char a[10];
+    //  printf("ENter:");
+    // fgets(a,10,stdin);
+    // fputs(a,stdout);
 
 
     // char s[10];

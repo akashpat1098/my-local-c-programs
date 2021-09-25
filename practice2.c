@@ -1,23 +1,98 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+/*
+ * This stores the total number of books in each shelf.
+ */
+int* total_number_of_books;//this stores array of no of books in a shelf
+
+/*
+ * This stores the total number of pages in each book of each shelf.
+ * The rows represent the shelves and the columns represent the books.
+ */
+int** total_number_of_pages;//this stores 2d array  no of pages/values of each books in  each shelf
 int main()
 {
 
-     char c;
-    printf("Enter the character\n");
-    scanf("%c",&c);
-    char s[10];
-    printf("Enter the string\n");
-    scanf("%s",s);
-    getchar();
-    char sen[10];
-    printf("Enter the sentence\n");
-    scanf("%[^\n]%*c", sen);
+  
+
+
+
+
+    int total_number_of_shelves;//no of shelf
+    scanf("%d", &total_number_of_shelves);
     
+    int total_number_of_queries;
+    scanf("%d", &total_number_of_queries);
+    //creating an array of no of books dynamically
+    int* total_number_of_books=(int*)malloc(total_number_of_shelves*sizeof(int));
+    //creating an  array of no of pages ,here only pointer to array of pointer is created
+    int** total_number_of_pages=(int**)malloc(total_number_of_shelves*sizeof(int*));
+    for (int i=0; i<total_number_of_shelves; i++) {
+    total_number_of_books[i]=0;//intialising no ogf books to 0
+    total_number_of_pages[i]=(int*)malloc(sizeof(int));//here 2d array is created ,giving an array to each pointer of above 
+    }
     
-    printf("char:%c\n",c);
-    printf("string:%s\n",s);
-    printf("sentence:%s\n",sen);
+    while (total_number_of_queries--) {
+        int type_of_query;
+        scanf("%d", &type_of_query);
+        
+        if (type_of_query == 1) {
+            //x is no shelf and y is no pages or no of books
+        int x, y;
+        scanf("%d %d", &x, &y);
+        *(total_number_of_books+x)+=1;//incrementing values of no of books by 1 
+        //reallocating size according to query
+        *(total_number_of_pages+x)=realloc(*(total_number_of_pages+x),*(total_number_of_books+x)*sizeof(int));
+        // inserting a  book with y pages in x shelf at last 
+        *(*(total_number_of_pages+x)+*(total_number_of_books+x)-1)=y;
+            
+
+        } else if (type_of_query == 2) {
+            int x, y;
+            scanf("%d %d", &x, &y);
+            printf("%d\n", *(*(total_number_of_pages + x) + y));
+        } else {
+            int x;
+            scanf("%d", &x);
+            printf("%d\n", *(total_number_of_books + x));
+        }
+    }
+
+    if (total_number_of_books) {
+        free(total_number_of_books);
+    }
+    
+    for (int i = 0; i < total_number_of_shelves; i++) {
+        if (*(total_number_of_pages + i)) {
+            free(*(total_number_of_pages + i));
+        }
+    }
+    
+    if (total_number_of_pages) {
+        free(total_number_of_pages);
+    }
+
+
+
+
+
+
+//    int arr[10]={0,0,0,0,0,0,0,0,0,0};
+//     char string[1000];
+//     fgets(string, 1000, stdin);
+//     for (int i=0; i<10; i++) {
+//         for (int j=0; j<strlen(string); j++) {
+//             if (string[j]==i) {
+//                 arr[i]++;
+//             }
+//         }
+     
+//     }
+//     for (int i = 0; i < 10; i++)
+//     {
+//         printf("%d",arr[i]);
+//     }
+    
     return 0;
 }
