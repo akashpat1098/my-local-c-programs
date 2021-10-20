@@ -20,6 +20,16 @@ int* func1(int*ptr){
 
 int main()
  {
+     int n;
+     printf("Enter value\n");
+     scanf("%d",&n);
+     int arr[n];
+     arr[1]=5;
+     arr[1]=6;
+     arr[1]=5;
+
+
+
     // int num, *arr, i;
     // scanf("%d", &num);
     // arr = (int*) malloc(num * sizeof(int));

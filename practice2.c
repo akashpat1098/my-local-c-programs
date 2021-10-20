@@ -13,12 +13,6 @@ int* total_number_of_books;//this stores array of no of books in a shelf
 int** total_number_of_pages;//this stores 2d array  no of pages/values of each books in  each shelf
 int main()
 {
-
-  
-
-
-
-
     int total_number_of_shelves;//no of shelf
     scanf("%d", &total_number_of_shelves);
     
