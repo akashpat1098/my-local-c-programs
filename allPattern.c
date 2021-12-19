@@ -1,6 +1,7 @@
 #include<stdio.h>
 void triangular_star_pattern(int);
 void reversed_triangular_star_pattern(int);
+// yaha pe right triangular star pattern bhi pront hota h bs 2 space saat mai print karna h
 void pyramidal_star_pattern(int); 
 void numerical_pyramid(int);
 void alphabetical_pyramid(int);
@@ -117,13 +118,12 @@ void pyramidal_star_pattern(int rows){
     {   
         for (int j = 1; j <=rows-i ; j++)
         {
-            printf(" ");
+            printf(" "); //replace with double space to print right triangular star pattern
         }
      
         for (int j = 1; j <=i; j++)
         {
-            printf("*"); 
-            printf(" ");
+            printf("* "); 
         }
         printf("\n");
      }

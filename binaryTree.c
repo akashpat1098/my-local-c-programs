@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct node
-{
+struct node{
     int data;
     struct node *left, *right;
 };
@@ -214,17 +213,17 @@ int main()
     postOrder(root);
     printf("\n");
     // isBST(root);
-    insert(root,7);
-    inOrder(root);
-    printf("\n");
-    if (checkBST(root)==1)
-    {
-        searchIteratively(root,7);  
-    }
-    else
-    {
-        printf("Search can't be done\n"); 
-    }
+    // insert(root,7);
+    // inOrder(root);
+    // printf("\n");
+    // if (checkBST(root)==1)
+    // {
+    //     searchIteratively(root,7);  
+    // }
+    // else
+    // {
+    //     printf("Search can't be done\n"); 
+    // }
     
     
     

@@ -6,14 +6,14 @@ int main(int argc, char const *argv[])
     scanf("%d",&size);
     for (int i = 1; i <= size; i++)
     {
-        printf("Enter the elements %d of array",i);
+        printf("Enter the elements %d of array ",i);
         scanf("%d",&arr[i-1]);
     }
-    sho=sort(arr,size);
+    sort(arr,size);
     printf("The sorted array is ");
     for (int i = 0; i < size; i++)
     {
-          printf("%d",arr[i]);
+          printf("%d ",arr[i]);
   
     }
     
