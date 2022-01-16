@@ -1,11 +1,7 @@
 #include<stdio.h>
-
-void   func(int a,int b,int c){
-   int sum=a+b+c;
-    printf("%d",sum);
-}
-
-int main()
+int main(int argc, char const *argv[])
 {
-   func(2,3,2);
+   printf("Hello World");
+   return 0;
 }
+
